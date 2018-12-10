@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html>
+  <head>
+
+    <meta charset="utf-8">
+    <title>ship</title>
+    <link href="https://fonts.googleapis.com/css?family=Libre+Baskerville" rel="stylesheet">
+
+    <style>
+    *{margin-top:0; margin-left:0; margin-right:0; overflow-x:hidden; overflow-y:hidden;}
+ body{background: none;   }
+
+
+     
+      
+ 
+
+
+   
+    
+    
+
+
+
+  #imgone{width:4212px; height:100%; position:fixed; left:0%; top:0%; 
+   z-index: -5}
+#imgtwo{width:4212px; height:100%; position:absolute; left:0%; top:0%; }
+#imgthree{width:588px; height:100%; position:absolute; left:0px; top:0%; 
+z-index: 11; margin-left:3000px; }
+#imgfour{width:588px; height:100%; position:absolute; left:1000px; top:0%;
+z-index: 10; }
+#imgfourt{width:588px; height:100%; position:absolute; left:3500px; top:0%;
+z-index: 10; }
+
+#imgfourth{width:588px; height:100%; position:absolute; left:2500px; top:0%;
+z-index: 10; }
+
+#imgfourf{width:588px; height:100%; position:absolute; left:2000px; top:0%;
+z-index: 10; }
+
+
+
+
+
+
+     #sol {width:200px; height:200px; position:fixed; left:45%; bottom: 10%; z-index:9;}
+
+     #soll {width:0px; height:0px; position:fixed; left:44%; bottom: 10%; z-index:9;}
+
+     #monitor{width:0px; height:0px; background:none; position:fixed; right:0;
+      color:white; text-align:center; line-height:40px; z-index:5;}
+
+
+
+      #doip{width:350px; position:absolute;
+  top:70px; left:40px; font-size: 40px; color:brown; transition:all 1s;}
+
+
+
+      html{font-family: 'Libre Baskerville', serif;}
+    </style>
+  </head>
+
+  <body>
+ <div id="myDIV" onwheel="myFunction()">
+
+
+
+
+<img id= imgone src="sq6_1_back.png">
+    <img id= imgtwo src="sq6_2_river.png">
+    <img id= imgthree src="sq6_3_sol1.png">
+    <img id= imgfour src="sq6_4_sol2.png">
+     <img id= imgfourt src="sq6_4_sol2.png">
+      <img id= imgfourth src="sq6_4_sol2.png">
+       <img id= imgfourf src="sq6_4_sol2.png">
+
+
+  
+
+    <img id = sol src="오른발.png">
+    <img id = soll src="왼발.png">
+
+
+<div id= monitor></div>
+
+<div id= doip>Chapter 6  </div>
+
+
+
+</div>
+
+
+  <script type="text/javascript">
+
+
+
+window.onwheel = function(e){
+  var scroll = 50;
+  if(e.deltaY < 0){ scroll = -scroll; } 
+  window.scrollBy(scroll, 0); 
+}
+  
+
+
+
+ window.onscroll = function(e){
+       
+       
+     imgthree.style.left = +(window.pageXOffset/-3)+"px";
+        
+       
+      
+     
+          
+
+
+
+           var t= document.documentElement.scrollLeft;
+  monitor.innerHTML = t +"px";
+  
+
+ }
+
+   
+
+  var toggle = "off";
+
+
+   function myFunction() {
+   
+
+if(toggle == "off"){
+      toggle = "on";
+    sol.style.width= "0px";
+
+   soll.style.width="200px";
+   soll.style.height="200px";
+      }
+      else{ 
+      toggle = "off";
+       soll.style.width= "0px";
+
+   sol.style.width="200px";
+   sol.style.height="200px";
+      
+      }
+      }
+
+
+
+
+    </script>
+
+  </body>
+</html>
